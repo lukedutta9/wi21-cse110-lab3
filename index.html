@@ -1,0 +1,312 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mrinmoy Dutta's Site</title>
+    <meta name="description" content="Site for CSE 110 Lab2">
+    <meta name="author" content="Mrinmoy Dutta">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <template>
+        <h2>BOO!</h2>
+        <img src="assets/ghost.png" height="200" width="200">
+    </template>
+    <header>
+        <h1>Hello 👋</h1>
+    </header>
+    <nav>
+        <a href="#Projects">Projects</a>
+        <a href="#Media">Media</a>
+        <a href="#form">Trivia</a>
+    </nav>
+    <main>
+        <p> My name is Mrinmoy Dutta and I'm a 2nd year computer 
+        science student at UCSD. Here I'll share some projects 
+        that I've been working on.
+        </p>
+
+        <div>
+            Here are some of the languages and tools that I've
+            worked with.
+
+            <ul>
+                <li>Languages</li>
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Dart</li>
+                    <li>Bash</li>
+                </ul>
+                <li>Tools/Frameworks/etc</li>
+                <ul>
+                    <li>Flutter</li>
+                    <li>Spring</li>
+                    <li>Tomcat</li>
+                    <li>Elasticsearch</li>
+                </ul>
+            </ul>
+        </div>
+        <hr>
+        <a name="Projects"></a>
+        <h2>Projects</h2>
+
+        <section>
+            <h3>Weather App</h3>
+
+            <details>
+                <summary>Info about my weather app</summary>
+                I created this site to learn how to make a 
+                website as well as get information through 
+                API calls.
+                <br>
+                <a href="https://github.com/lukedutta9/weather-app">Github</a>
+                <br><br>
+                <picture>
+                    <figure>
+                        <img src="assets/weather-app.png">
+                        <figcaption>Screenshot of the app</figcaption>
+                    </figure>
+                </picture>
+                
+            </details>
+        </section>
+
+        <section>
+            <h3>Other Project Ideas</h3>
+
+            Some other project ideas that I have are:
+
+            <ol>
+                <li>ML model that learns how difficulty ratings work in osu!</li>
+                <li>Web Chat Room</li>
+            </ol>
+        </section>
+        <hr>
+        <h2>Other Random Stuff</h2>
+
+        <section>
+            <aside> In my CSE 130 class (Programming Languages) I learned about 
+                functional programming, specifically with the language Haskell. 
+                It just absolutely <b><i>blows my mind</i></b> with how it works.
+            </aside>
+
+            Here's an example of quicksort in a "typical" language<br>
+
+            <code>
+                void sort(int arr[], int beg, int end){<br>
+                    &emsp;if (end > beg + 1){<br>
+                    &emsp;    &emsp;int piv = arr[beg];<br>
+                    &emsp;    &emsp;int l = beg + 1;<br>
+                    &emsp;    &emsp;int r = end;<br>
+                    &emsp;    &emsp;while (l != r-1){<br>
+                    &emsp;    &emsp;    &emsp;if(arr[l] <= piv) l++;<br>
+                    &emsp;    &emsp;    &emsp;else swap(&arr[l], &arr[r--]);<br>
+                    &emsp;    &emsp;    &emsp;if(arr[l]<=piv && arr[r]<=piv)<br>
+                    &emsp;    &emsp;    &emsp;    &emsp;l=r+1;<br>
+                    &emsp;    &emsp;    &emsp;else if(arr[l]<=piv && arr[r]>piv)<br>
+                    &emsp;    &emsp;    &emsp;    &emsp;{l++; r--;}<br>
+                    &emsp;    &emsp;    &emsp;else if (arr[l]>piv && arr[r]<=piv)<br>
+                    &emsp;    &emsp;    &emsp;    &emsp;swap(&arr[l++], &arr[r--]);<br>
+                    &emsp;    &emsp;    &emsp;else r=l-1;<br>
+                    &emsp;    &emsp;    &emsp;swap(&arr[r--], &arr[beg]);<br>
+                    &emsp;    &emsp;    &emsp;sort(arr, beg, r);<br>
+                    &emsp;    &emsp;    &emsp;sort(arr, l, end);<br>
+                    &emsp;    &emsp;}<br>
+                    &emsp;}<br>
+                }<br>
+            </code>
+
+            <br>
+
+            Now in a functional language:<br>
+
+            <pre>
+sort [] = []
+sort (x:xs) = sort ls ++ [x] ++ sort rs
+    where
+        ls = [ l | l <- xs, l <= x ]
+        rs = [ r | r <- xs, x <  r ]
+            </pre>
+        </section>
+
+        <p> While these implementations don't line up completely, it's still 
+            really cool how we're able to write algorithms in other ways 
+            through functional programming. It helps give a different 
+            perspective on programming as a whole.</p>
+
+        <h3>My Senior Quote</h3>
+        
+        <p><span style="background:#333;color:white">> "Sounds like a you problem"</span></p>
+
+        <a name="Media"></a>
+        <h3>Motivational Media</h3>
+        
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1RDyTemoCT8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <audio controls>
+            <source src="assets/doot.mp3" type="audio/mp3">
+        </audio>
+        <br>
+        <video width="560" height="315" controls>
+            <source src="assets/work.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+
+        <h3>Cool Stuff We Can Draw In HTML (and a little JS)</h3>
+        <section>
+            <canvas id="myCanvas">
+                Your browser does not support the canvas tag.
+            </canvas>
+            
+            <button type="button" onclick="boo()">
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+                Click Me <strong>Bet</strong>
+            </button>
+
+            <div id="spoopy"></div>
+        </section>
+        <hr>
+        <table>
+            <colgroup>
+              <col span="1" style="background-color:cyan">
+            </colgroup>
+            <tr>
+                <th></th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+            <tr>
+              <th>Lecture</td>
+              <td>110, 101, 134B</td>
+              <td>130</td>
+              <td>110, 101, 134B</td>
+              <td>130</td>
+              <td>110, 101, 134B</td>
+            </tr>
+            <tr>
+              <th>Discussion</td>
+              <td>134B, 101</td>
+              <td></td>
+              <td>110, 101</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Lab</td>
+              <td></td>
+              <td>110</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <caption><h4><em>My Schedule This Quarter</em></h4></caption>
+        </table>
+        <hr>
+        <h3>Trivia Game Show</h3>
+        <a name="form"></a>
+
+        Hello! This is a game show to see if you know random information. Let's begin.<br><br>
+
+        <form action="submit.php">
+            <fieldset>
+                <legend>Personal Info:</legend>
+                <input type="hidden" id="secret" name="secret" value="hey ignore this">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="lname">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+                <label for="phone">Enter your phone number:</label>
+                <input type="tel" id="phone" name="phone"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required>
+                <small>Format: 123-456-7890</small><br><br>
+                <label for="lname">SSN: </label>
+                <input type="password" id="ssn" name="ssn"><br><br>
+                <label for="cars">What year are you?</label>
+                <select>
+                  <optgroup label="Current">
+                    <option value="volvo">Freshman</option>
+                    <option value="sophomore">Sophomore</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                  </optgroup>
+                  <optgroup label="Alumni">
+                    <option value="alumni">Alumni</option>
+                  </optgroup>
+                </select><br><br>
+                <label for="browser">What is your favorite color of the rainbow?</label>
+                <input list="colors" name="color" id="color">
+                <datalist id="colors">
+                  <option value="Red">
+                  <option value="Orange">
+                  <option value="Yellow">
+                  <option value="Green">
+                  <option value="Blue">
+                  <option value="Indigo">
+                  <option value="Violet">
+                </datalist><br><br>
+                <label for="date">Today's Date</label>
+                <input type="date" id="date" name="date"><br><br>
+                <label for="appt">What Time is it Right Now?</label>
+                <input type="time" id="appt" name="appt" required><br><br>
+                <label for="avatar">Upload a photo of yourself:</label>
+                <input type="file", id="avatar" name="avatar"
+                    accept="image/png, image/jpeg"><br<br>
+            </fieldset>
+            <fieldset>
+                <legend>Questions:</legend>
+                <label for="commandments">What did you do today?</label><br><br>
+                <textarea id="commandments" name="commandments" rows="4" cols="50"></textarea>
+                <br><br>
+
+            </fieldset>
+            <fieldset>
+                <legend>Conclusion:</legend>
+                <label for="volume">How did you like this quiz? (1 being bad, 10 good)</label><br><br>
+                Bad <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"> Good<br><br>
+                
+            </fieldset>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+    </main>
+    <footer>Created by yours truly</footer>
+</body>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Hello World", 50, 75);
+
+    function boo() {
+        var temp = document.getElementsByTagName("template")[0];
+        console.log(temp)
+        var clon = temp.content.cloneNode(true);
+        var spoop = document.getElementById("spoopy");
+        if (spoop.childElementCount == 0) {
+            spoop.appendChild(clon);
+        } else {
+            spoop.replaceChild(clon, spoop.children[0])
+        }
+    }
+</script> 
+</html>
