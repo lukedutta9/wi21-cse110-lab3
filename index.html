@@ -12,7 +12,9 @@
 <body>
     <template>
         <h2>BOO!</h2>
-        <img src="assets/ghost.png" height="200" width="200">
+        <picture>
+            <img src="assets/ghost.png" height="200" width="200">
+        </picture>
     </template>
     <header>
         <h1>Hello 👋</h1>
@@ -33,21 +35,23 @@
             worked with.
 
             <ul>
-                <li>Languages</li>
-                <ul>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>Dart</li>
-                    <li>Bash</li>
-                </ul>
-                <li>Tools/Frameworks/etc</li>
-                <ul>
-                    <li>Flutter</li>
-                    <li>Spring</li>
-                    <li>Tomcat</li>
-                    <li>Elasticsearch</li>
-                </ul>
+                <li>Languages
+                    <ul>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Dart</li>
+                        <li>Bash</li>
+                    </ul>
+                </li>
+                <li>Tools/Frameworks/etc
+                    <ul>
+                        <li>Flutter</li>
+                        <li>Spring</li>
+                        <li>Tomcat</li>
+                        <li>Elasticsearch</li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <hr>
@@ -65,12 +69,10 @@
                 <br>
                 <a href="https://github.com/lukedutta9/weather-app">Github</a>
                 <br><br>
-                <picture>
-                    <figure>
-                        <img src="assets/weather-app.png">
-                        <figcaption>Screenshot of the app</figcaption>
-                    </figure>
-                </picture>
+                <figure>
+                    <img src="assets/weather-app.png">
+                    <figcaption>Screenshot of the app</figcaption>
+                </figure>
                 
             </details>
         </section>
@@ -103,13 +105,13 @@
                     &emsp;    &emsp;int l = beg + 1;<br>
                     &emsp;    &emsp;int r = end;<br>
                     &emsp;    &emsp;while (l != r-1){<br>
-                    &emsp;    &emsp;    &emsp;if(arr[l] <= piv) l++;<br>
+                    &emsp;    &emsp;    &emsp;if(arr[l] &lt;= piv) l++;<br>
                     &emsp;    &emsp;    &emsp;else swap(&arr[l], &arr[r--]);<br>
-                    &emsp;    &emsp;    &emsp;if(arr[l]<=piv && arr[r]<=piv)<br>
+                    &emsp;    &emsp;    &emsp;if(arr[l]&lt;=piv && arr[r]&lt;=piv)<br>
                     &emsp;    &emsp;    &emsp;    &emsp;l=r+1;<br>
-                    &emsp;    &emsp;    &emsp;else if(arr[l]<=piv && arr[r]>piv)<br>
+                    &emsp;    &emsp;    &emsp;else if(arr[l]&lt;=piv && arr[r]>piv)<br>
                     &emsp;    &emsp;    &emsp;    &emsp;{l++; r--;}<br>
-                    &emsp;    &emsp;    &emsp;else if (arr[l]>piv && arr[r]<=piv)<br>
+                    &emsp;    &emsp;    &emsp;else if (arr[l]>piv && arr[r]&lt;=piv)<br>
                     &emsp;    &emsp;    &emsp;    &emsp;swap(&arr[l++], &arr[r--]);<br>
                     &emsp;    &emsp;    &emsp;else r=l-1;<br>
                     &emsp;    &emsp;    &emsp;swap(&arr[r--], &arr[beg]);<br>
@@ -146,7 +148,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
         <h3>Motivational Media</h3>
         
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1RDyTemoCT8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1RDyTemoCT8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
         <audio controls>
             <source src="assets/doot.mp3" type="audio/mp3">
@@ -175,11 +177,12 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
         </section>
         <hr>
         <table>
+            <caption><h4><em>My Schedule This Quarter</em></h4></caption>
             <colgroup>
               <col span="1" style="background-color:cyan">
             </colgroup>
             <tr>
-                <th></th>
+              <th><span style="color:white">hiya</span></th>
               <th>Monday</th>
               <th>Tuesday</th>
               <th>Wednesday</th>
@@ -187,7 +190,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <th>Friday</th>
             </tr>
             <tr>
-              <th>Lecture</td>
+              <th>Lecture</th>
               <td>110, 101, 134B</td>
               <td>130</td>
               <td>110, 101, 134B</td>
@@ -195,7 +198,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <td>110, 101, 134B</td>
             </tr>
             <tr>
-              <th>Discussion</td>
+              <th>Discussion</th>
               <td>134B, 101</td>
               <td></td>
               <td>110, 101</td>
@@ -210,7 +213,6 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <td></td>
               <td></td>
             </tr>
-            <caption><h4><em>My Schedule This Quarter</em></h4></caption>
         </table>
         <hr>
         <h3>Trivia Game Show</h3>
@@ -240,7 +242,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
                 <small>Format: 123-456-7890</small><br><br>
                 <label for="lname">SSN: </label>
                 <input type="password" id="ssn" name="ssn"><br><br>
-                <label for="cars">What year are you?</label>
+                <label>What year are you?</label>
                 <select>
                   <optgroup label="Current">
                     <option value="volvo">Freshman</option>
@@ -252,7 +254,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
                     <option value="alumni">Alumni</option>
                   </optgroup>
                 </select><br><br>
-                <label for="browser">What is your favorite color of the rainbow?</label>
+                <label for="colors">What is your favorite color of the rainbow?</label>
                 <input list="colors" name="color" id="color">
                 <datalist id="colors">
                   <option value="Red">
@@ -268,8 +270,8 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
                 <label for="appt">What Time is it Right Now?</label>
                 <input type="time" id="appt" name="appt" required><br><br>
                 <label for="avatar">Upload a photo of yourself:</label>
-                <input type="file", id="avatar" name="avatar"
-                    accept="image/png, image/jpeg"><br<br>
+                <input type="file" id="avatar" name="avatar"
+                    accept="image/png, image/jpeg"><br><br>
             </fieldset>
             <fieldset>
                 <legend>Questions:</legend>
@@ -280,7 +282,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
             </fieldset>
             <fieldset>
                 <legend>Conclusion:</legend>
-                <label for="volume">How did you like this quiz? (1 being bad, 10 good)</label><br><br>
+                <label for="satisfaction">How did you like this quiz? (1 being bad, 10 good)</label><br><br>
                 Bad <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"> Good<br><br>
                 
             </fieldset>
@@ -290,23 +292,23 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
 
     </main>
     <footer>Created by yours truly</footer>
-</body>
-<script>
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.strokeText("Hello World", 50, 75);
-
-    function boo() {
-        var temp = document.getElementsByTagName("template")[0];
-        console.log(temp)
-        var clon = temp.content.cloneNode(true);
-        var spoop = document.getElementById("spoopy");
-        if (spoop.childElementCount == 0) {
-            spoop.appendChild(clon);
-        } else {
-            spoop.replaceChild(clon, spoop.children[0])
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 50, 75);
+    
+        function boo() {
+            var temp = document.getElementsByTagName("template")[0];
+            console.log(temp)
+            var clon = temp.content.cloneNode(true);
+            var spoop = document.getElementById("spoopy");
+            if (spoop.childElementCount == 0) {
+                spoop.appendChild(clon);
+            } else {
+                spoop.replaceChild(clon, spoop.children[0])
+            }
         }
-    }
-</script> 
+    </script> 
+</body>
 </html>
