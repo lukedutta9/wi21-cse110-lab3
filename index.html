@@ -125,14 +125,15 @@
             <br>
 
             Now in a functional language:<br>
-
-            <pre>
+            <code>
+                <pre>
 sort [] = []
 sort (x:xs) = sort ls ++ [x] ++ sort rs
     where
         ls = [ l | l &lt;- xs, l &lt;= x ]
         rs = [ r | r &lt;- xs, x &lt;  r ]
-            </pre>
+                </pre>
+            </code>
         </section>
 
         <p> While these implementations don't line up completely, it's still 
