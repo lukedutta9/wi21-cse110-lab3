@@ -125,15 +125,13 @@
             <br>
 
             Now in a functional language:<br>
-            <code>
-                <pre>
+            <pre>
 sort [] = []
 sort (x:xs) = sort ls ++ [x] ++ sort rs
     where
         ls = [ l | l &lt;- xs, l &lt;= x ]
         rs = [ r | r &lt;- xs, x &lt;  r ]
-                </pre>
-            </code>
+            </pre>
         </section>
 
         <p> While these implementations don't line up completely, it's still 
@@ -180,7 +178,8 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
         <table>
             <caption><h4><em>My Schedule This Quarter</em></h4></caption>
             <colgroup>
-              <col span="1" style="background-color:cyan">
+                <col span="1" style="background-color:cyan">
+                <col span="5" style="background-color:white">
             </colgroup>
             <tr>
               <th> </th>
@@ -191,7 +190,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <th>Friday</th>
             </tr>
             <tr>
-              <th>Lecture</th>
+              <td>Lecture</td>
               <td>110, 101, 134B</td>
               <td>130</td>
               <td>110, 101, 134B</td>
@@ -199,7 +198,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <td>110, 101, 134B</td>
             </tr>
             <tr>
-              <th>Discussion</th>
+              <td>Discussion</td>
               <td>134B, 101</td>
               <td> </td>
               <td>110, 101</td>
@@ -207,7 +206,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <td> </td>
             </tr>
             <tr>
-              <th>Lab</td>
+              <td>Lab</td>
               <td> </td>
               <td>110</td>
               <td> </td>
