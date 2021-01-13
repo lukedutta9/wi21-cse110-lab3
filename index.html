@@ -130,8 +130,8 @@
 sort [] = []
 sort (x:xs) = sort ls ++ [x] ++ sort rs
     where
-        ls = [ l | l <- xs, l <= x ]
-        rs = [ r | r <- xs, x <  r ]
+        ls = [ l | l &lt;- xs, l &lt;= x ]
+        rs = [ r | r &lt;- xs, x &lt;  r ]
             </pre>
         </section>
 
@@ -182,7 +182,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
               <col span="1" style="background-color:cyan">
             </colgroup>
             <tr>
-              <th><span style="color:white">hiya</span></th>
+              <th> </th>
               <th>Monday</th>
               <th>Tuesday</th>
               <th>Wednesday</th>
@@ -200,18 +200,18 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
             <tr>
               <th>Discussion</th>
               <td>134B, 101</td>
-              <td></td>
+              <td> </td>
               <td>110, 101</td>
-              <td></td>
-              <td></td>
+              <td> </td>
+              <td> </td>
             </tr>
             <tr>
               <th>Lab</td>
-              <td></td>
+              <td> </td>
               <td>110</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
             </tr>
         </table>
         <hr>
@@ -254,7 +254,7 @@ sort (x:xs) = sort ls ++ [x] ++ sort rs
                     <option value="alumni">Alumni</option>
                   </optgroup>
                 </select><br><br>
-                <label for="colors">What is your favorite color of the rainbow?</label>
+                <label>What is your favorite color of the rainbow?</label>
                 <input list="colors" name="color" id="color">
                 <datalist id="colors">
                   <option value="Red">
