@@ -1,9 +1,23 @@
+/* Setup a default font for the page */
 * {
+    color: #999;
+}
 
+body {
+    background-color: #101010;
 }
 
 h1, h2, h3 {
-    
+    color: rgb(55, 129, 58);
+}
+
+p {
+    color: white;
+}
+
+#quote {
+    background:#333;
+    color:white
 }
 
 .center {
@@ -19,11 +33,11 @@ a[target] {
 }
 
 a:visited {
-
+    color: #4f0991;
 }
 
 figure figcaption {
-
+    color: hsl(9, 100%, 64%)
 }
 
 section > aside {
@@ -35,5 +49,5 @@ a + h3 {
 }
 
 summary ~ br {
-    
+
 }
