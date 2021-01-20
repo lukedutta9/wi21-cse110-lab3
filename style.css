@@ -20,16 +20,18 @@ p {
     color:white
 }
 
-.center {
-
+.media {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20%;
 }
 
 #SPOOPY {
-
+    margin-right: 80%;
 }
 
 a[target] {
-
+    color: rgb(55, 129, 58);
 }
 
 a:visited {
@@ -50,4 +52,33 @@ a + h3 {
 
 summary ~ br {
 
+}
+
+audio {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+table {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #999;
+    border-radius: 10px;
+}
+
+th {
+    padding: 2px 2px 2px 2px;
+    margin: 50% 50% 50% 50%;
+}
+
+tr {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+svg {
+    height: 100px;
+    width: 100px;
 }
