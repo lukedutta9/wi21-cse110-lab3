@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <style>
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </style>
 
 </head>
 
@@ -37,7 +44,7 @@
             Here are some of the languages and tools that I've
             worked with.
 
-            <ul>
+            <ul class="container">
                 <li>Languages
                     <ul>
                         <li>Java</li>
@@ -47,10 +54,14 @@
                         <li>Bash</li>
                     </ul>
                 </li>
-                <li>Tools/Frameworks/etc
+                <li>Frameworks/SDKs
                     <ul>
                         <li>Flutter</li>
                         <li>Spring</li>
+                    </ul>
+                </li>
+                <li>Etc
+                    <ul>
                         <li>Tomcat</li>
                         <li>Elasticsearch</li>
                     </ul>
@@ -99,42 +110,76 @@
                 It just absolutely <b><i>blows my mind</i></b> with how it works.
             </aside>
 
-            Here's an example of quicksort in a "typical" language<br>
-
-            <code>
-                void sort(int arr[], int beg, int end){<br>
-                    &emsp;if (end > beg + 1){<br>
-                    &emsp;    &emsp;int piv = arr[beg];<br>
-                    &emsp;    &emsp;int l = beg + 1;<br>
-                    &emsp;    &emsp;int r = end;<br>
-                    &emsp;    &emsp;while (l != r-1){<br>
-                    &emsp;    &emsp;    &emsp;if(arr[l] &lt;= piv) l++;<br>
-                    &emsp;    &emsp;    &emsp;else swap(&arr[l], &arr[r--]);<br>
-                    &emsp;    &emsp;    &emsp;if(arr[l]&lt;=piv && arr[r]&lt;=piv)<br>
-                    &emsp;    &emsp;    &emsp;    &emsp;l=r+1;<br>
-                    &emsp;    &emsp;    &emsp;else if(arr[l]&lt;=piv && arr[r]>piv)<br>
-                    &emsp;    &emsp;    &emsp;    &emsp;{l++; r--;}<br>
-                    &emsp;    &emsp;    &emsp;else if (arr[l]>piv && arr[r]&lt;=piv)<br>
-                    &emsp;    &emsp;    &emsp;    &emsp;swap(&arr[l++], &arr[r--]);<br>
-                    &emsp;    &emsp;    &emsp;else r=l-1;<br>
-                    &emsp;    &emsp;    &emsp;swap(&arr[r--], &arr[beg]);<br>
-                    &emsp;    &emsp;    &emsp;sort(arr, beg, r);<br>
-                    &emsp;    &emsp;    &emsp;sort(arr, l, end);<br>
-                    &emsp;    &emsp;}<br>
-                    &emsp;}<br>
-                }<br>
-            </code>
-
             <br>
 
-            Now in a functional language:<br>
-            <pre>
+            <div class="grid-contain">
+                <div>
+                Here's an example of quicksort in a "typical" language (Java)<br>
+                <code>
+                    void sort(int arr[], int beg, int end){<br>
+                        &emsp;if (end > beg + 1){<br>
+                        &emsp;    &emsp;int piv = arr[beg];<br>
+                        &emsp;    &emsp;int l = beg + 1;<br>
+                        &emsp;    &emsp;int r = end;<br>
+                        &emsp;    &emsp;while (l != r-1){<br>
+                        &emsp;    &emsp;    &emsp;if(arr[l] &lt;= piv) l++;<br>
+                        &emsp;    &emsp;    &emsp;else swap(&arr[l], &arr[r--]);<br>
+                        &emsp;    &emsp;    &emsp;if(arr[l]&lt;=piv && arr[r]&lt;=piv)<br>
+                        &emsp;    &emsp;    &emsp;    &emsp;l=r+1;<br>
+                        &emsp;    &emsp;    &emsp;else if(arr[l]&lt;=piv && arr[r]>piv)<br>
+                        &emsp;    &emsp;    &emsp;    &emsp;{l++; r--;}<br>
+                        &emsp;    &emsp;    &emsp;else if (arr[l]>piv && arr[r]&lt;=piv)<br>
+                        &emsp;    &emsp;    &emsp;    &emsp;swap(&arr[l++], &arr[r--]);<br>
+                        &emsp;    &emsp;    &emsp;else r=l-1;<br>
+                        &emsp;    &emsp;    &emsp;swap(&arr[r--], &arr[beg]);<br>
+                        &emsp;    &emsp;    &emsp;sort(arr, beg, r);<br>
+                        &emsp;    &emsp;    &emsp;sort(arr, l, end);<br>
+                        &emsp;    &emsp;}<br>
+                        &emsp;}<br>
+                    }<br>
+                </code>
+                </div>
+                <div>
+                    Similar "typical" language, this time in Python:<br>
+                    <pre>
+elements = len(arr)
+
+if elements < 2:
+    return arr
+
+current_position = 0
+
+for i in range(1, elements):
+    if arr[i] <= arr[0]:
+        current_position += 1
+        temp = arr[i]
+        arr[i] = arr[current_position]
+        arr[current_position] = temp
+
+temp = arr[0]
+arr[0] = arr[current_position] 
+arr[current_position] = temp
+
+left = QuickSort(arr[0:current_position])
+right = QuickSort(arr[current_position+1:elements])
+
+arr = left + [arr[current_position]] + right
+
+return arr
+                    </pre>
+                    </div>
+
+                <div>
+                Now in a functional language:<br>
+                <pre>
 sort [] = []
 sort (x:xs) = sort ls ++ [x] ++ sort rs
     where
         ls = [ l | l &lt;- xs, l &lt;= x ]
         rs = [ r | r &lt;- xs, x &lt;  r ]
-            </pre>
+                </pre>
+                </div>
+            </div>
         </section>
 
         <p> While these implementations don't line up completely, it's still 

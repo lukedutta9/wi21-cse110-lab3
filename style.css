@@ -20,6 +20,18 @@ em {
     text-decoration: dotted;
 }
 
+.grid-contain {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 30%;
+}
+
 h1, h2, h3 {
     color: rgb(55, 129, 58);
 }
@@ -54,6 +66,14 @@ a[target] {
 
 a:visited {
     color: #4f0991;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+a:active {
+    color: #101010;
 }
 
 figure figcaption {
