@@ -1,10 +1,23 @@
 /* Setup a default font for the page */
 * {
+    font-family: 'Work Sans', serif;
     color: #999;
+}
+
+code, pre {
+    font-family: monospace;
+    position: relative;
+    top: 5px;
+    left: 20px;
+    bottom: 10px;
 }
 
 body {
     background-color: #101010;
+}
+
+em {
+    text-decoration: dotted;
 }
 
 h1, h2, h3 {
@@ -13,6 +26,7 @@ h1, h2, h3 {
 
 p {
     color: white;
+    text-align: left;
 }
 
 #quote {
@@ -24,6 +38,10 @@ p {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 20%;
+}
+
+p#inline {
+    display: inline;
 }
 
 #SPOOPY {
@@ -43,15 +61,17 @@ figure figcaption {
 }
 
 section > aside {
-
+    display: block;
+    max-width: 50%;
 }
 
 a + h3 {
-
+    padding: 5px;
+    position: relative;
 }
 
 summary ~ br {
-
+    margin: 1% 1% 0% 0%;
 }
 
 audio {
